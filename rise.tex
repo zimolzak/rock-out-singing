@@ -2,19 +2,21 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \newcommand{\ch}[2]{$\overset{ \resizebox*{!}{1.2\height}{\textsf{#2}} }{\text{#1}}$}
+\newlength{\nxword}
+\newcommand{\chh}[2]{\settowidth{\nxword}{#1}\parbox[b]{\nxword}{\textsf{\large #2}\\ #1}}
 \begin{document}
 
 \section*{First Song}
 
 \begin{verse}
 
-Lorem \newlength{\nxword}\settowidth{\nxword}{dachshund}\parbox[b]{\nxword}{\textsf{\large G} dachshund} ipsum dolor sit amet, \\
+\chh{Lorem}{G} ipsum dolor sit amet, \\
 consectetur adipiscing elit.\\
 Nullam quis dui metus, \\
 rhoncus rhoncus purus. \\
 Mauris mauris nisl, \\
-\ch{eleifend}{G} vel venenatis id, \\
-\ch{pellentesque}{G$^7$} sit amet nisl.
+\chh{eleifend}{Gm} vel venenatis id, \\
+\chh{pellentesque}{C$^7$} sit amet nisl.
 
 \end{verse}
 
